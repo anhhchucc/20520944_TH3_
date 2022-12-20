@@ -112,7 +112,7 @@
             this.btn_Playlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Playlist.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Playlist.Location = new System.Drawing.Point(83, 307);
-            this.btn_Playlist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Playlist.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Playlist.Name = "btn_Playlist";
             this.btn_Playlist.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Playlist.Size = new System.Drawing.Size(267, 96);
@@ -129,7 +129,7 @@
             this.btn_Credits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Credits.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Credits.Location = new System.Drawing.Point(83, 497);
-            this.btn_Credits.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Credits.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Credits.Name = "btn_Credits";
             this.btn_Credits.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Credits.Size = new System.Drawing.Size(267, 96);
@@ -146,7 +146,7 @@
             this.btn_Lyrics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Lyrics.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Lyrics.Location = new System.Drawing.Point(83, 105);
-            this.btn_Lyrics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Lyrics.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Lyrics.Name = "btn_Lyrics";
             this.btn_Lyrics.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Lyrics.Size = new System.Drawing.Size(267, 96);
@@ -167,8 +167,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(113, 133);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(457, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 708);
             this.panel1.TabIndex = 16;
@@ -190,7 +190,7 @@
             this.btn_Back.FlatAppearance.BorderSize = 0;
             this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Location = new System.Drawing.Point(2, 2);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(82, 61);
             this.btn_Back.TabIndex = 16;
@@ -243,8 +243,8 @@
             this.panel2.Controls.Add(this.btn_Playlist);
             this.panel2.Controls.Add(this.btn_Lyrics);
             this.panel2.Controls.Add(this.btn_Credits);
-            this.panel2.Location = new System.Drawing.Point(459, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(420, 27);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 708);
             this.panel2.TabIndex = 17;
@@ -258,7 +258,7 @@
             this.btn_Download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Download.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Download.Location = new System.Drawing.Point(277, 575);
-            this.btn_Download.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Download.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Download.Name = "btn_Download";
             this.btn_Download.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Download.Size = new System.Drawing.Size(89, 72);
@@ -275,7 +275,7 @@
             this.btn_Play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Play.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Play.Location = new System.Drawing.Point(61, 575);
-            this.btn_Play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Play.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Play.Name = "btn_Play";
             this.btn_Play.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Play.Size = new System.Drawing.Size(89, 72);
@@ -290,7 +290,7 @@
             this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Location = new System.Drawing.Point(0, 671);
-            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exit.Margin = new System.Windows.Forms.Padding(2);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(39, 39);
             this.exit.TabIndex = 18;
@@ -304,7 +304,7 @@
             this.btn_Love.FlatAppearance.BorderSize = 0;
             this.btn_Love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Love.Location = new System.Drawing.Point(391, 461);
-            this.btn_Love.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Love.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Love.Name = "btn_Love";
             this.btn_Love.Size = new System.Drawing.Size(62, 48);
             this.btn_Love.TabIndex = 4;
@@ -316,7 +316,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(459, 422);
             this.pictureBox1.TabIndex = 0;
@@ -329,6 +329,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(909, 705);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_Download);
             this.Controls.Add(this.btn_Play);
             this.Controls.Add(this.exit);
@@ -337,9 +338,8 @@
             this.Controls.Add(this.btn_Love);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Information";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -345,6 +345,8 @@ namespace _20520944_TH3
                 //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
                 //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
                 lb_name.Text = music_[listBox1.SelectedIndex].Name;
+                pictureBox2.Image = Resources.pause;
+                play_music = true;
                 timer1.Start();
                 history_play = new class_history_music(music_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
                 history_music_play.Add(history_play);
@@ -354,6 +356,49 @@ namespace _20520944_TH3
         private void progressBar1_MouseDown(object sender, MouseEventArgs e)
         {
             Player.controls.currentPosition = Player.currentMedia.duration * e.X / progressBar1.Width;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Player.controls.stop();
+            pictureBox2.Image = Resources.play;
+            play_music = false;
+        }
+        public bool play_music = true;
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (play_music)
+            {
+                pictureBox2.Image = Resources.play;
+                play_music = false;
+                Player.controls.pause();
+            }
+            else
+            {
+                pictureBox2.Image = Resources.pause;
+                play_music = true;
+                Player.controls.play();
+            }
+        }
+        internal void load_image()
+        {
+            if (play_music)
+            {
+                pictureBox2.Image = Resources.play;
+                play_music = false;
+            }
+            else
+            {
+                pictureBox2.Image = Resources.pause;
+                play_music = true;
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Player.controls.stop();
+            Player.controls.play();
         }
     }
 }

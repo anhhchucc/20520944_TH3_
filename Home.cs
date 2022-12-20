@@ -221,11 +221,15 @@ namespace _20520944_TH3
         {
             formout.music_ = new List<Music>();
             formout.music_.Add(music_out);
+            formout.play_music = false;
+            formout.load_image();
             formout.load_musicc();
         }
         internal void load_music_for_mainform_playlist()
         {
             formout.music_ = music_out_home;
+            formout.play_music = false;
+            formout.load_image();
             formout.load_musicc();
         }
     }

@@ -51,6 +51,8 @@
             this.pnContainer = new System.Windows.Forms.Panel();
             this.btn_User = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
@@ -59,18 +61,21 @@
             this.lbtime = new System.Windows.Forms.Label();
             this.lb_volume = new System.Windows.Forms.Label();
             this.trackBar = new System.Windows.Forms.TrackBar();
-            this.btn_Pause = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -361,6 +366,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.btn_User);
             this.panel3.Controls.Add(this.pictureBox1);
@@ -370,7 +378,6 @@
             this.panel3.Controls.Add(this.lbtime);
             this.panel3.Controls.Add(this.lb_volume);
             this.panel3.Controls.Add(this.trackBar);
-            this.panel3.Controls.Add(this.btn_Pause);
             this.panel3.Controls.Add(this.btn_Next);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.lb_singer);
@@ -380,6 +387,28 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1663, 140);
             this.panel3.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::_20520944_TH3.Properties.Resources.play;
+            this.pictureBox3.Location = new System.Drawing.Point(1058, 51);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 40);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 42;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::_20520944_TH3.Properties.Resources.play;
+            this.pictureBox2.Location = new System.Drawing.Point(783, 30);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button8
             // 
@@ -410,7 +439,7 @@
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(334, 51);
+            this.button7.Location = new System.Drawing.Point(475, 35);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 48);
@@ -467,22 +496,6 @@
             this.trackBar.TabIndex = 33;
             this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
             // 
-            // btn_Pause
-            // 
-            this.btn_Pause.BackColor = System.Drawing.Color.White;
-            this.btn_Pause.BackgroundImage = global::_20520944_TH3.Properties.Resources.pause;
-            this.btn_Pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Pause.FlatAppearance.BorderSize = 0;
-            this.btn_Pause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Pause.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pause.Location = new System.Drawing.Point(765, 28);
-            this.btn_Pause.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Pause.Name = "btn_Pause";
-            this.btn_Pause.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Pause.Size = new System.Drawing.Size(89, 72);
-            this.btn_Pause.TabIndex = 32;
-            this.btn_Pause.UseVisualStyleBackColor = false;
-            // 
             // btn_Next
             // 
             this.btn_Next.BackColor = System.Drawing.Color.White;
@@ -524,9 +537,8 @@
             this.lb_singer.ForeColor = System.Drawing.Color.Violet;
             this.lb_singer.Location = new System.Drawing.Point(132, 81);
             this.lb_singer.Name = "lb_singer";
-            this.lb_singer.Size = new System.Drawing.Size(77, 32);
+            this.lb_singer.Size = new System.Drawing.Size(0, 32);
             this.lb_singer.TabIndex = 28;
-            this.lb_singer.Text = "Ca sĩ";
             // 
             // lb_name
             // 
@@ -535,9 +547,8 @@
             this.lb_name.ForeColor = System.Drawing.Color.Violet;
             this.lb_name.Location = new System.Drawing.Point(127, 35);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(172, 35);
+            this.lb_name.Size = new System.Drawing.Size(0, 35);
             this.lb_name.TabIndex = 29;
-            this.lb_name.Text = "Tên bài hát";
             // 
             // listBox1
             // 
@@ -552,6 +563,17 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1138, 51);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 43;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // mainForm
             // 
@@ -573,8 +595,11 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,7 +632,6 @@
         private System.Windows.Forms.Label lbtime;
         private System.Windows.Forms.Label lb_volume;
         private System.Windows.Forms.TrackBar trackBar;
-        private System.Windows.Forms.Button btn_Pause;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lb_singer;
@@ -617,6 +641,9 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
