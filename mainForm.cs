@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using _20520944_TH3.Model;
 using _20520944_TH3.Properties;
+using AxWMPLib;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace _20520944_TH3
@@ -83,7 +84,7 @@ namespace _20520944_TH3
             new Music("Bạn của tôi ơi", Resources.Bạn_của_tôi_ơi, "Acoustic", "Phạm Đình Thái Ngân", "Phạm Đình Thái Ngân", "BẠN CỦA TÔI ƠI ! PHẠM ĐÌNH THÁI NGÂN ｜ Love Memories Radio #3 [ MV LYRICS ].mp3", "Đã trải qua bao nhiêu kỷ niệm khó quên\r\nNhững năm tháng tươi đẹp giờ chia tay đã đến\r\nNhững vu vơ đem gửi lại trong giấc mơ\r\nBiết đâu lỡ mai này còn ai đang đợi chờ\r\nPre:\r\nMặc dù nhớ, rồi làm ngơ\r\nNhưng trong lòng vẫn hằng mong bên nhau xuân hạ thu đông\r\nTạm biệt nhé, goodbye\r\nLần này thôi được khóc để mai mình sẽ nhớ !\r\nChorus:\r\nBạn của tôi ơi hãy giữ mãi trong tim ký ức này\r\nĐể mai này lớn có cái để kể cho đàn con\r\nTa đã từng sống, từng mơ, từng cố gắng để trưởng thành hơn\r\nMột tuổi trẻ nhớ lại ta sẽ mỉm cười\r\nChào nhau lần cuối nước mắt cứ rơi không kịp nên lời\r\nGiọt thương lời nhớ men theo tiếng hát sâu vào tim\r\nBạn thân yêu hỡi hãy nhớ rằng\r\nCó tôi luôn bên cạnh\r\nBiết đâu trên đường đời mai gặp lại nhau\r\nĐã có những lúc ồn ào\r\nCùng nhau đàn ca nghêu ngao\r\nĐôi khi mình hát hơi phô cũng chẳng sao !\r\nƯớc muốn sẽ mãi vô tư\r\nChỉ bạn và tôi bên nhau\r\nThanh xuân này ta có nhau thật nhiệm màu"),
             new Music("Mây hạ", Resources.Mây_hạ, "Acoustic", "Starry Night", "Starry Night", "STARRY NIGHT - MÂY HẠ (OFFICIAL LYRIC VIDEO).mp3", "Em đi chiều nay đường nắng duỗi thân dài\r\nChân chưa vội lay lại đau từng bước mọn\r\nEm ca bài ca chiều nay buồn hơn khóc\r\nNghe từng ngày mai thẫn thờ một mình đây\r\nTrời chiều nay mây buông thành khói\r\nBóng anh sẽ mờ còn đâu em nhớ\r\nNgày dìm em khuất trong màn sương\r\nMờ ảnh cuối đường vàng võ niềm thương\r\nEm lên tàu đây sầu kín suốt toa dài\r\nTay ôm niềm đau còn tay nào giấu mặt\r\nKhóc cũng đành thôi thời gian làm sao nắm\r\nThương từng hoàng hôn mây về chở sầu theo\r\nTrời chiều nay mây buông thành khói\r\nBóng anh sẽ mờ còn đâu em nhớ\r\nNgày dìm em khuất trong màn sương\r\nMờ ảnh cuối đường vàng võ niềm thương\r\nEm lên tàu đây sầu kín suốt toa dài\r\nTay ôm niềm đau còn tay nào giấu mặt\r\nKhóc cũng đành thôi thời gian làm sao nắm\r\nThương từng hoàng hôn mây về chở sầu theo\r\nEm mãi còn đi sầu giăng dầy đêm tối\r\nThương từ ngoài hiên dấu hài chìm vào mưa"),
             new Music("Khi em lớn", Resources.Khi_em_lớn, "Acoustic", "Orange", "Orange, Hoàng Dũng", "Orange x Hoàng Dũng - ‘Khi Em Lớn’ Official MV.mp3", "Verse 1:\r\n\r\nKhi em lớn\r\nVui biết bao vì được đi muôn nơi\r\nKhông phải đi về nhà trước 10 giờ tối Hmm… em lớn rồi mà\r\nKhi em lớn\r\nTrước mắt em là bầu trời trong xanh\r\nEm cứ vô tư chạy đi thật nhanh\r\nNào có biết rằng\r\nNgày em lớn\r\n\r\nChorus:\r\n\r\nEm sẽ ngã đau hơn bây giờ\r\nĐời đâu giống đôi vần thơ\r\nEm nhận ra thế gian\r\nAi cũng làm ngơ\r\nKhóc với ai bây giờ\r\nVì sẽ chẳng có ai lắng nghe\r\nĐiều không có ai muốn nghe\r\nEm lặng thinh…\r\nHuhuhuhuhuhuhu x3\r\n\r\nVerse 2:\r\n\r\nKhi em lớn\r\nSẽ có lúc em nhận ra em yêu\r\nXây biết bao hy vọng đến người em ước sau này\r\nSẽ về một nhà\r\n\r\nKhi em lớn\r\nSẽ có hơn đôi lần mà em trao\r\nSẽ có hơn đôi lần mà em tin\r\nNào có biết rằng\r\nNgày em lớn\r\n\r\nChorus:\r\n\r\nEm lại lỡ tin sai một người\r\nLời gian dối trên vành môi\r\nEm nhận ra trái tim em\r\nVỡ làm đôi\r\nKhóc với ai bây giờ\r\nVì sẽ chẳng có ai lắng nghe\r\nĐiều không có ai muốn nghe\r\nEm lặng thinh Huhuhuhuhuhu x3\r\n\r\nBridge:\r\n\r\nKhi em lớn đường về nhà sao quá xa\r\nCha mẹ đây nhưng sao thật khó để nói ra\r\nCon thất bại rồi\r\nChỉ muốn bé lại thôi\r\nEm à…\r\n\r\nChorus:\r\n\r\nEm sẽ ngã thêm đôi ba lần\r\nSẽ xây xước đôi bàn chân\r\nNhưng rồi em sẽ quen thôi chớ ngại ngần\r\nDẫu em có một mình\r\nChỉ cần em vẫn luôn lắng nghe\r\nĐiều không có ai lắng nghe\r\nHuhuhuhuhuhu x6"),
-            new Music("Vì em có anh", Resources.Vì_em_có_anh, "Acoustic", "Hoàng Yến Chibi", "Hoàng Yến Chibi", "Vì Em Có Anh ｜ Hoàng Yến Chibi ｜ Stay home with Hoang Yen Chibi (1).mp3", "Ngày xưa, ngày ta ngày đầu mới quen\r\nMột hai, vài câu rồi không nhớ tên\r\nVà ta chụp chung một bức hình\r\nAnh post lên ngay sau khi gặp\r\nNgày ta hẹn nhau lần đầu với nhau\r\nLà em chọn đi cùng anh tới nơi\r\nMà em luôn muốn thấy được hoàng hôn\r\nNếu lỡ mai này ta cách xa\r\nVẫn nhớ những ngày tháng đã qua\r\nEm luôn ở đây để mong được anh nhắc mỗi ngày\r\nVì em có anh, em rạng ngời\r\nMình cùng đi xa và bên nhau hát ca\r\nDù nhiều lúc em hay làm anh thấy buồn\r\nAnh vẫn luôn bên em và nói\r\nChuyện tình chúng ta, ai nào ngờ\r\nTự nhiên hôm đi đường lại va lấy nhau\r\nVà giờ anh không tìm được ai nữa như vậy\r\nLuôn muốn bên anh luôn ân cần\r\nVì em có anh, em rạng ngời\r\nDù là hôm nay, là ngày mai, vẫn có anh\r\nVì em rất yêu anh và không muốn xa rời\r\nEm muốn anh bên em và nói\r\nTừng ngày chúng ta bên nhau lặng thầm\r\nVà ngày hôm nay, ngày anh muốn lấy em\r\nChẳng còn cách xa nhau và hai trái tim gần\r\nEm muốn anh bên em ân cần\r\nLuôn muốn anh bên em ân cần\r\nChỉ mỗi anh yêu em trăm lần\r\n"),
+            new Music("Vì em có anh", Resources.Vì_em_có_anh, "Acoustic", "Hoàng Yến Chibi", "Hoàng Yến Chibi", "Vì Em Có Anh ｜ Hoàng Yến Chibi ｜ Stay home with Hoang Yen Chibi (1).mp3", "Ngày xưa, ngày ta ngày đầu mới quen\r\nMột hai, vài câu rồi không nhớ tên\r\nVà ta chụp chung một bức hình\r\nAnh post lên ngay sau khi gặp\r\nNgày ta hẹn nhau lần đầu với nhau\r\nLà em chọn đi cùng anh tới nơi\r\nMà em luôn muốn thấy được hoàng hôn\r\nNếu lỡ mai này ta cách xa\r\nVẫn nhớ những ngày tháng đã qua\r\nEm luôn ở đây để mong được anh nhắc mỗi ngày\r\nVì em có anh, em rạng ngời\r\nMình cùng đi xa và bên nhau hát ca\r\nDù nhiều lúc em hay làm anh thấy buồn\r\nAnh vẫn luôn bên em và nói\r\nChuyện tình chúng ta, ai nào ngờ\r\nTự nhiên hôm đi đường lại va lấy nhau\r\nVà giờ anh không tìm được ai nữa như vậy\r\nLuôn muốn bên anh luôn ân cần\r\nVì em có anh, em rạng ngời\r\nDù là hôm nay, là ngày mai, vẫn có anh\r\nVì em rất yêu anh và không muốn xa rời\r\nEm muốn anh bên em và nói\r\nTừng ngày chúng ta bên nhau lặng thầm\r\nVà ngày hôm nay, ngày anh muốn lấy em\r\nChẳng còn cách xa nhau và hai trái tim gần\r\nEm muốn anh bên em ân cần\r\nLuôn muốn anh bên em ân cần\r\nChỉ mỗi anh yêu em trăm lần\r\n"),
             new Music("Thương", Resources.Thương, "Acoustic", "Tiến Nguyễn", "Reddy", "Thương (Acoustic Version) - Reddy ｜ Music ATM #23 NEW VERSION.mp3", "Mưa vừa ghé qua rằng: \"Mưa vừa ôm em đấy\"\r\nGió phiêu du tìm tóc em và tìm bờ môi phai\r\nGhen với gió, giận cơn mưa, mong cho trời đứng lại\r\nGiật nụ hôn từ gió khát, làm trời cao để ôm mưa\r\nĐi kiếm nắng, tận mây xa, mong cho lòng ấm lại\r\nĐể còn yêu mùa gió mới, để còn say tình chênh vênh\r\nHát vu vơ về mây, về mưa, tình em giờ đây giữ riêng mình\r\nMúa vi vu ngàn câu, ngàn ca vì nhớ ban mai\r\nTính sao đây tình em, dòng sông giờ như mùa xuân úa phai màu\r\nVẫn như ta đành thương, đành vương, đành nhớ thế thôi\r\nGhen với gió, giận cơn mưa, mong cho trời đứng lại\r\nGiật nụ hôn từ gió khát, làm trời cao để ôm mưa\r\nĐi kiếm nắng, tận mây xa, mong cho lòng ấm lại\r\nĐể còn yêu mùa gió mới, để còn say tình chênh vênh\r\nThương\r\nHát vu vơ về mây, về mưa, tình em giờ đây giữ riêng mình\r\nMúa vi vu ngàn câu, ngàn ca vì nhớ ban mai\r\nTính sao đây tình em, dòng sông giờ như mùa xuân úa phai màu\r\nVẫn như ta đành thương, đành vương, đành nhớ thế thôi\r\nGhen với gió, giận cơn mưa, mong cho trời đứng lại\r\nGiật nụ hôn từ gió khát, làm trời cao để ôm mưa\r\nĐi kiếm nắng, tận mây xa, mong cho lòng ấm lại\r\nĐể còn yêu mùa gió mới, để còn say tình chênh vênh\r\nThương"),
         };
         private void addUserControl(UserControl userControl)
@@ -129,7 +130,7 @@ namespace _20520944_TH3
             btn_Love.ForeColor = Color.Black;
             btn_Playlist.ForeColor = Color.White;
             btn_DM.ForeColor = Color.Black;
-            user_playlist uc = new user_playlist();
+            user_playlist uc = new user_playlist(this);
             addUserControl(uc);
         }
 
@@ -256,18 +257,103 @@ namespace _20520944_TH3
                     btn_DM.ForeColor = Color.Black;
                     btn_Love.ForeColor = Color.Black;
                     btn_Playlist.ForeColor = Color.Black;
-                    find_user uc = new find_user(music, textBox1.Text);
+                    text_ = textBox1.Text;
+                    music_play = music;
+                    find_user uc = new find_user(this);
                     addUserControl(uc);
                 }
             }
         }
-        public Music music_;
+        public List<Music> music_;
         WMPLib.WindowsMediaPlayer Player = new WMPLib.WindowsMediaPlayer();
         internal void load_musicc()
         {
-            
-            Player.URL = music_.Mp3_4;
+            listBox1.Items.Clear();
+            for (int i = 0; i < music_.Count; i++)
+            {
+                listBox1.Items.Add(music_[i].Mp3_4);
+            }
+            listBox1.SelectedIndex = 0;
+            Player.URL = music_[listBox1.SelectedIndex].Mp3_4;
+            lb_name.Text = music_[listBox1.SelectedIndex].Name;
+            lb_singer.Text = music_[listBox1.SelectedIndex].Singer;
+            pictureBox1.Image = music_[listBox1.SelectedIndex].Image;
             Player.controls.play();
+            timer1.Start();
+            trackBar.Value = 100;
+            lb_volume.Text = trackBar.Value.ToString();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar_Scroll(object sender, EventArgs e)
+        {
+            Player.settings.volume = trackBar.Value;
+            lb_volume.Text = trackBar.Value.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex > 0)
+            {
+                listBox1.SelectedIndex -= 1;
+                Player.URL = music_[listBox1.SelectedIndex].Mp3_4;
+                Player.controls.play();
+                //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
+                //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
+                lb_name.Text = music_[listBox1.SelectedIndex].Name + " - " + music_[listBox1.SelectedIndex].Singer;
+                timer1.Start();
+
+            }
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex < music_.Count - 1)
+            {
+                listBox1.SelectedIndex += 1;
+                Player.URL = music_[listBox1.SelectedIndex].Mp3_4;
+                Player.controls.play();
+                //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
+                //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
+                lb_name.Text = music_[listBox1.SelectedIndex].Name + " - " + music_[listBox1.SelectedIndex].Singer;
+                timer1.Start();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Player.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                progressBar1.Maximum = (int)Player.controls.currentItem.duration;
+                progressBar1.Value = (int)Player.controls.currentPosition;
+            }
+            lbtime.Text = Player.controls.currentPositionString;
+            lbduration.Text = Player.controls.currentItem.durationString.ToString();
+        }
+
+        class_history_music history_play;
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                Player.URL = music_[listBox1.SelectedIndex].Mp3_4;
+                Player.controls.play();
+                //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
+                //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
+                lb_name.Text = music_[listBox1.SelectedIndex].Name;
+                timer1.Start();
+                history_play = new class_history_music(music_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
+                history_music_play.Add(history_play);
+            }
+        }
+
+        private void progressBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Player.controls.currentPosition = Player.currentMedia.duration * e.X / progressBar1.Width;
         }
     }
 }

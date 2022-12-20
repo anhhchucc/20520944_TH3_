@@ -15,21 +15,10 @@ namespace _20520944_TH3
 {
     public partial class Home : UserControl
     {
-        public Home()
-        {
-            InitializeComponent();
-        }
         List<Music> musicout;
         List<Music> play_music;
         mainForm formout;
         public string text_out;
-        public Home(List<Music> musicin, string text) : this()
-        {
-            musicout = musicin;
-            text_out = text;
-            choose_list_music();
-        }
-
         public Home(mainForm formin)
         {
             InitializeComponent();
@@ -178,6 +167,7 @@ namespace _20520944_TH3
             }
         }
         public Music music_out;
+        public List<Music> music_out_home;
         private void ptb_click(object sender, EventArgs e)
         {
             for (int i = 0; i < musicout.Count; i++)
@@ -229,7 +219,13 @@ namespace _20520944_TH3
         }
         internal void load_music_for_mainform()
         {
-            formout.music_ = music_out;
+            formout.music_ = new List<Music>();
+            formout.music_.Add(music_out);
+            formout.load_musicc();
+        }
+        internal void load_music_for_mainform_playlist()
+        {
+            formout.music_ = music_out_home;
             formout.load_musicc();
         }
     }

@@ -17,20 +17,28 @@ namespace _20520944_TH3
 {
     public partial class find_user : UserControl
     {
-        public find_user()
-        {
-            InitializeComponent();
-        }
+        mainForm formout;
         List<Music> musicout;
         string textout;
-        public find_user(List<Music> musicin, string text) : this()
+        public find_user(mainForm formin)
         {
-            musicout = musicin;
-            textout = text.Trim().ToLower();
+            InitializeComponent();
+            formout = formin;
+            musicout = formout.music_play;
+            textout = formout.text_.Trim().ToLower();
             tấtCảToolStripMenuItem.BackColor = Color.White;
             find_result();
             load_result();
+
         }
+        //public find_user(List<Music> musicin, string text) : this()
+        //{
+        //    musicout = musicin;
+        //    textout = text.Trim().ToLower();
+        //    tấtCảToolStripMenuItem.BackColor = Color.White;
+        //    find_result();
+        //    load_result();
+        //}
         List<Music> music_find;
         bool check_music_global = false, check_singer_global = false, check_author_global = false;
         private void find_result()
@@ -192,6 +200,7 @@ namespace _20520944_TH3
         #endregion
 
         public Music music_out;
+        public List<Music> music_play_find;
         private void ptb_click(object sender, EventArgs e)
         {
             if (((PictureBox)sender).Name == "Songs")
@@ -201,7 +210,7 @@ namespace _20520944_TH3
                     if (musicout[i].Name.ToLower() == ((PictureBox)sender).Tag.ToString().ToLower())
                     {
                         music_out = musicout[i];
-                        Information newform = new Information(music_out);
+                        Information newform = new Information(this);
                         newform.ShowDialog();
                     }
                 }
@@ -254,6 +263,12 @@ namespace _20520944_TH3
                 caSĩToolStripMenuItem.BackColor = Color.Pink;
                 lờiBàiHátToolStripMenuItem.BackColor = Color.Pink;
             }
+        }
+        internal void load_music_find()
+        {
+            formout.music_ = new List<Music>();
+            formout.music_.Add(music_out);
+            formout.load_musicc();
         }
 
         #region loadauthorsinger
@@ -625,4 +640,5 @@ namespace _20520944_TH3
         }
     }
     #endregion
+
 }

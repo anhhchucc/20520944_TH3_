@@ -15,18 +15,23 @@ namespace _20520944_TH3
 {
     public partial class add_song_in_playlist : Form
     {
-        public add_song_in_playlist()
+        Information formout;
+        Music music_out;
+        public add_song_in_playlist(Information formin)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-        Music music_out;
-        public add_song_in_playlist(Music music_in) : this()
-        {
-            music_out = music_in;
+            formout = formin;
+            music_out = formout.music_play;
             load_list_view();
+
         }
+        //public add_song_in_playlist(Music music_in) : this()
+        //{
+        //    music_out = music_in;
+        //    load_list_view();
+        //}
         ImageList imagelist;
         void LoadImageList()
         {
@@ -142,8 +147,11 @@ namespace _20520944_TH3
             }
             if (play_playlist.Count > 0)
             {
-                play newform = new play(play_playlist);
-                newform.ShowDialog();
+                formout.music_play_information = play_playlist;
+                formout.load_music_for_home();
+                //play newform = new play(play_playlist);
+                //newform.ShowDialog();
+
             }
             else
             {
@@ -176,10 +184,12 @@ namespace _20520944_TH3
             }
             if (listBox1.SelectedIndex != -1)
             {
-                play_for_formplay = new List<Music>();
-                play_for_formplay.Add(play_playlist[listBox1.SelectedIndex]);
-                play newform = new play(play_for_formplay);
-                newform.ShowDialog();
+                formout.music_play = play_playlist[listBox1.SelectedIndex];
+                formout.load_music_for_home_playlist();
+                //play_for_formplay = new List<Music>();
+                //play_for_formplay.Add(play_playlist[listBox1.SelectedIndex]);
+                //play newform = new play(play_for_formplay);
+                //newform.ShowDialog();
             }
         }
 

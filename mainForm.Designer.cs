@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -47,8 +48,8 @@
             this._NKL = new System.Windows.Forms.Button();
             this._Indie = new System.Windows.Forms.Button();
             this._Acoustic = new System.Windows.Forms.Button();
-            this.btn_User = new System.Windows.Forms.Button();
             this.pnContainer = new System.Windows.Forms.Panel();
+            this.btn_User = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,7 +64,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.lb_singer = new System.Windows.Forms.Label();
             this.lb_name = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -263,7 +265,6 @@
             this.panel2.BackColor = System.Drawing.Color.Pink;
             this.panel2.Controls.Add(this.btn_Back);
             this.panel2.Controls.Add(this._NKL);
-            this.panel2.Controls.Add(this.pnContainer);
             this.panel2.Controls.Add(this._Indie);
             this.panel2.Controls.Add(this._Acoustic);
             this.panel2.Location = new System.Drawing.Point(2, 2);
@@ -334,6 +335,15 @@
             this._Acoustic.UseVisualStyleBackColor = true;
             this._Acoustic.Click += new System.EventHandler(this._Acoustic_Click);
             // 
+            // pnContainer
+            // 
+            this.pnContainer.BackColor = System.Drawing.Color.Pink;
+            this.pnContainer.Location = new System.Drawing.Point(324, 0);
+            this.pnContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.pnContainer.Name = "pnContainer";
+            this.pnContainer.Size = new System.Drawing.Size(1063, 755);
+            this.pnContainer.TabIndex = 2;
+            // 
             // btn_User
             // 
             this.btn_User.BackgroundImage = global::_20520944_TH3.Properties.Resources.exit;
@@ -347,15 +357,6 @@
             this.btn_User.TabIndex = 15;
             this.btn_User.UseVisualStyleBackColor = true;
             this.btn_User.Click += new System.EventHandler(this.btn_User_Click);
-            // 
-            // pnContainer
-            // 
-            this.pnContainer.BackColor = System.Drawing.Color.Pink;
-            this.pnContainer.Location = new System.Drawing.Point(88, 31);
-            this.pnContainer.Margin = new System.Windows.Forms.Padding(2);
-            this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(1063, 755);
-            this.pnContainer.TabIndex = 2;
             // 
             // panel3
             // 
@@ -399,6 +400,7 @@
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
@@ -422,6 +424,8 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(558, 15);
             this.progressBar1.TabIndex = 37;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.progressBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.progressBar1_MouseDown);
             // 
             // lbduration
             // 
@@ -461,6 +465,7 @@
             this.trackBar.Name = "trackBar";
             this.trackBar.Size = new System.Drawing.Size(212, 56);
             this.trackBar.TabIndex = 33;
+            this.trackBar.Scroll += new System.EventHandler(this.trackBar_Scroll);
             // 
             // btn_Pause
             // 
@@ -493,6 +498,7 @@
             this.btn_Next.Size = new System.Drawing.Size(78, 58);
             this.btn_Next.TabIndex = 31;
             this.btn_Next.UseVisualStyleBackColor = false;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // button5
             // 
@@ -509,6 +515,7 @@
             this.button5.Size = new System.Drawing.Size(78, 58);
             this.button5.TabIndex = 30;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // lb_singer
             // 
@@ -532,24 +539,29 @@
             this.lb_name.TabIndex = 29;
             this.lb_name.Text = "Tên bài hát";
             // 
-            // listView1
+            // listBox1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1393, 2);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(273, 753);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(1388, 2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(273, 756);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 705);
+            this.ClientSize = new System.Drawing.Size(1663, 900);
             this.ControlBox = false;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnContainer);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -603,7 +615,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

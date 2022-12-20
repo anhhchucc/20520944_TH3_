@@ -74,10 +74,11 @@ namespace _20520944_TH3
 
         private void btn_Play_Click(object sender, EventArgs e)
         {
-            List<Music> music_play = new List<Music>();
-            music_play.Add(formout.music_out);
-            play formplay = new play(music_play);
-            formplay.ShowDialog();
+            //List<Music> music_play = new List<Music>();
+            //music_play.Add(formout.music_out);
+            formout.load_music_for_mainform();
+            //play formplay = new play(music_play);
+            //formplay.ShowDialog();
             quantity = 0;
             for (int i = 0; i < history_music_play.Count; i++)
             {

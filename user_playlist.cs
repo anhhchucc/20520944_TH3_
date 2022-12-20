@@ -16,12 +16,13 @@ namespace _20520944_TH3
 {
     public partial class user_playlist : UserControl
     {
-        public user_playlist()
+        mainForm formout;
+        public user_playlist(mainForm formin)
         {
             InitializeComponent();
             load_list_view();
+            formout = formin;
         }
-
         private void exit_Click(object sender, EventArgs e)
         {
             
@@ -125,8 +126,10 @@ namespace _20520944_TH3
             }
             if (play_playlist.Count > 0)
             {
-                play newform = new play(play_playlist);
-                newform.ShowDialog();
+                formout.music_ = play_playlist;
+                formout.load_musicc();
+                //play newform = new play(play_playlist);
+                //newform.ShowDialog();
             }
             else
             {

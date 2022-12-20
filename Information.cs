@@ -18,19 +18,17 @@ namespace _20520944_TH3
     {
         bool love = true;
         Home formout;
+        find_user ucout;
         Music musicout;
         string text;
         bool flag_check = false;
-        public Information()
+        public Information(find_user ucin)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
             this.StartPosition = FormStartPosition.CenterScreen;
-        }
-
-        public Information(Music musicin) : this()
-        {
-            musicout = musicin;
+            ucout = ucin;
+            musicout = ucout.music_out;
             pictureBox1.BackgroundImage = musicout.Image;
             label1.Text = musicout.Name;
             label8.Text = musicout.Name;
@@ -39,6 +37,18 @@ namespace _20520944_TH3
             label9.Text = musicout.Author;
             label6.Text = musicout.Type;
         }
+
+        //public Information(Music musicin) : this()
+        //{
+        //    musicout = musicin;
+        //    pictureBox1.BackgroundImage = musicout.Image;
+        //    label1.Text = musicout.Name;
+        //    label8.Text = musicout.Name;
+        //    label10.Text = musicout.Singer;
+        //    label5.Text = musicout.Singer;
+        //    label9.Text = musicout.Author;
+        //    label6.Text = musicout.Type;
+        //}
 
         public Information(Home ucin)
         {
@@ -63,19 +73,20 @@ namespace _20520944_TH3
             panel1.Hide();
             panel2.BringToFront();
         }
-
+        public Music music_play;
+        public List<Music> music_play_information;
         private void btn_Playlist_Click(object sender, EventArgs e)
         {
             if (flag_check)
             {
-                add_song_in_playlist newform = new add_song_in_playlist(formout.music_out);
-                newform.ShowDialog();
+                music_play = formout.music_out;
             }
             else
             {
-                add_song_in_playlist newform = new add_song_in_playlist(musicout);
-                newform.ShowDialog();
+                music_play = musicout;
             }
+            add_song_in_playlist newform = new add_song_in_playlist(this);
+            newform.ShowDialog();
         }
 
         private void btn_Lyrics_Click(object sender, EventArgs e)
@@ -147,7 +158,7 @@ namespace _20520944_TH3
         List<Music> play_;
         private void btn_Play_Click(object sender, EventArgs e)
         {
-            List<Music> music_play = new List<Music>();
+            //List<Music> music_play = new List<Music>();
             if (flag_check)
             {
                 //music_play.Add(formout.music_out);
@@ -156,8 +167,8 @@ namespace _20520944_TH3
             else
             {
                 //music_play.Add(musicout);
-                formout.music_out = musicout;
-                formout.load_music_for_mainform();
+                //formout.music_out = musicout;
+                ucout.load_music_find();
             }
             //play formplay = new play(music_play);
             //formplay.ShowDialog();
@@ -176,6 +187,24 @@ namespace _20520944_TH3
                 form_download form = new form_download(musicout.Mp3_4);
                 form.ShowDialog();
             }
+        }
+        internal void load_music_for_home()
+        {
+            if (flag_check)
+            {
+                formout.music_out_home = music_play_information;
+                formout.load_music_for_mainform_playlist();
+            }
+            else
+            {
+                ucout.music_play_find = music_play_information;
+                ucout.load_music_find();
+            }
+        }
+        internal void load_music_for_home_playlist()
+        {
+            formout.music_out = music_play;
+            formout.load_music_for_mainform();
         }
     }
 }
