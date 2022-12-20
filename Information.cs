@@ -150,14 +150,17 @@ namespace _20520944_TH3
             List<Music> music_play = new List<Music>();
             if (flag_check)
             {
-                music_play.Add(formout.music_out);
+                //music_play.Add(formout.music_out);
+                formout.load_music_for_mainform();
             }
             else
             {
-                music_play.Add(musicout);
+                //music_play.Add(musicout);
+                formout.music_out = musicout;
+                formout.load_music_for_mainform();
             }
-            play formplay = new play(music_play);
-            formplay.ShowDialog();
+            //play formplay = new play(music_play);
+            //formplay.ShowDialog();
 
         }
 

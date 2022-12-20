@@ -22,6 +22,8 @@ namespace _20520944_TH3
         public static List<string> _playlist = new List<string>();
         public static List<class_playlist> name_song_in_playlist = new List<class_playlist>();
         public static List<class_history_music> history_music_play = new List<class_history_music>();
+        public List<Music> music_play;
+        public string text_;
         Music musicout;
         public mainForm()
         {
@@ -31,7 +33,9 @@ namespace _20520944_TH3
             this.StartPosition = FormStartPosition.CenterScreen;
             panel2.Hide();
             panel1.BringToFront();
-            Home uc = new Home(music, "Home");
+            text_ = "Home";
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
 
 
@@ -98,7 +102,9 @@ namespace _20520944_TH3
             btn_Love.ForeColor = Color.Black;
             btn_Playlist.ForeColor = Color.Black;
     
-            Home uc = new Home(music, btn_Home.Text);
+            text_ = btn_Home.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -111,8 +117,8 @@ namespace _20520944_TH3
             btn_Love.ForeColor = Color.Black;
             btn_Playlist.ForeColor = Color.Black;
             btn_DM.ForeColor = Color.Black;
-            Home uc = new Home(music, btn_Home.Text);
-            addUserControl(uc);
+            //Home uc = new Home(music, btn_Home.Text);
+            //addUserControl(uc);
         }
 
         private void btn_Playlist_Click(object sender, EventArgs e)
@@ -136,7 +142,10 @@ namespace _20520944_TH3
             btn_Love.ForeColor = Color.White;
             btn_Playlist.ForeColor = Color.Black;
 
-            Home uc = new Home(love_music, btn_Love.Text);
+            
+            text_ = btn_Love.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -151,7 +160,9 @@ namespace _20520944_TH3
             btn_Love.ForeColor = Color.Black;
             btn_Playlist.ForeColor = Color.Black;
 
-            Home uc = new Home(music, btn_History.Text);
+            text_ = btn_History.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -178,7 +189,9 @@ namespace _20520944_TH3
             _Indie.ForeColor = Color.Black;
             _Acoustic.ForeColor = Color.White;
             _NKL.ForeColor = Color.Black;
-            Home uc = new Home(music, _Acoustic.Text);
+            text_ = _Acoustic.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -193,7 +206,9 @@ namespace _20520944_TH3
             _Indie.ForeColor = Color.White;
             _Acoustic.ForeColor = Color.Black;
             _NKL.ForeColor = Color.Black;
-            Home uc = new Home(music, _Indie.Text);
+            text_ = _Indie.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -208,7 +223,9 @@ namespace _20520944_TH3
             _Indie.ForeColor = Color.Black;
             _Acoustic.ForeColor = Color.Black;
             _NKL.ForeColor = Color.White;
-            Home uc = new Home(music, _NKL.Text);
+            text_ = _NKL.Text;
+            music_play = music;
+            Home uc = new Home(this);
             addUserControl(uc);
         }
 
@@ -244,10 +261,13 @@ namespace _20520944_TH3
                 }
             }
         }
-
+        public Music music_;
+        WMPLib.WindowsMediaPlayer Player = new WMPLib.WindowsMediaPlayer();
         internal void load_musicc()
         {
-
+            
+            Player.URL = music_.Mp3_4;
+            Player.controls.play();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace _20520944_TH3
         }
         List<Music> musicout;
         List<Music> play_music;
+        mainForm formout;
         public string text_out;
         public Home(List<Music> musicin, string text) : this()
         {
@@ -29,6 +30,14 @@ namespace _20520944_TH3
             choose_list_music();
         }
 
+        public Home(mainForm formin)
+        {
+            InitializeComponent();
+            formout = formin;
+            text_out = formout.text_;
+            musicout = formin.music_play;
+            choose_list_music();
+        }
         public List<int> quantity_play_of_1_song;
         public List<string> name_song;
 
@@ -217,6 +226,11 @@ namespace _20520944_TH3
                 play newform = new play(play_music);
                 newform.ShowDialog();
             }
+        }
+        internal void load_music_for_mainform()
+        {
+            formout.music_ = music_out;
+            formout.load_musicc();
         }
     }
 }
