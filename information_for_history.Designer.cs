@@ -48,10 +48,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(2, 776);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(1, 497);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 49);
+            this.label10.Size = new System.Drawing.Size(77, 32);
             this.label10.TabIndex = 22;
             this.label10.Text = "Ca sĩ";
             // 
@@ -59,20 +58,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 696);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(1, 445);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 56);
+            this.label1.Size = new System.Drawing.Size(172, 35);
             this.label1.TabIndex = 23;
             this.label1.Text = "Tên bài hát";
             // 
             // lstShow
             // 
             this.lstShow.HideSelection = false;
-            this.lstShow.Location = new System.Drawing.Point(952, 225);
-            this.lstShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstShow.Location = new System.Drawing.Point(635, 144);
             this.lstShow.Name = "lstShow";
-            this.lstShow.Size = new System.Drawing.Size(913, 926);
+            this.lstShow.Size = new System.Drawing.Size(610, 594);
             this.lstShow.TabIndex = 27;
             this.lstShow.UseCompatibleStateImageBehavior = false;
             // 
@@ -80,10 +77,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 935);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 598);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 42);
+            this.label2.Size = new System.Drawing.Size(67, 27);
             this.label2.TabIndex = 28;
             this.label2.Text = "Ca sĩ";
             // 
@@ -91,10 +87,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 857);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1, 548);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 49);
+            this.label3.Size = new System.Drawing.Size(77, 32);
             this.label3.TabIndex = 29;
             this.label3.Text = "Ca sĩ";
             // 
@@ -105,9 +100,10 @@
             this.btn_History.FlatAppearance.BorderSize = 0;
             this.btn_History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_History.Font = new System.Drawing.Font("Comic Sans MS", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_History.Location = new System.Drawing.Point(1232, 45);
+            this.btn_History.Location = new System.Drawing.Point(821, 29);
+            this.btn_History.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_History.Name = "btn_History";
-            this.btn_History.Size = new System.Drawing.Size(361, 144);
+            this.btn_History.Size = new System.Drawing.Size(241, 92);
             this.btn_History.TabIndex = 30;
             this.btn_History.Text = "History";
             this.btn_History.UseVisualStyleBackColor = false;
@@ -116,10 +112,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 1004);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(1, 643);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(265, 49);
+            this.label4.Size = new System.Drawing.Size(167, 32);
             this.label4.TabIndex = 31;
             this.label4.Text = "Số lần nghe:";
             // 
@@ -127,10 +122,9 @@
             // 
             this.lbquantity.AutoSize = true;
             this.lbquantity.Font = new System.Drawing.Font("Arial", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbquantity.Location = new System.Drawing.Point(300, 1004);
-            this.lbquantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbquantity.Location = new System.Drawing.Point(200, 643);
             this.lbquantity.Name = "lbquantity";
-            this.lbquantity.Size = new System.Drawing.Size(197, 49);
+            this.lbquantity.Size = new System.Drawing.Size(125, 32);
             this.lbquantity.TabIndex = 32;
             this.lbquantity.Text = "Da nghe:";
             // 
@@ -142,10 +136,11 @@
             this.btn_Download.FlatAppearance.BorderSize = 0;
             this.btn_Download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Download.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Download.Location = new System.Drawing.Point(797, 865);
+            this.btn_Download.Location = new System.Drawing.Point(531, 554);
+            this.btn_Download.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Download.Name = "btn_Download";
             this.btn_Download.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Download.Size = new System.Drawing.Size(134, 112);
+            this.btn_Download.Size = new System.Drawing.Size(89, 72);
             this.btn_Download.TabIndex = 26;
             this.btn_Download.UseVisualStyleBackColor = false;
             this.btn_Download.Click += new System.EventHandler(this.btn_Download_Click);
@@ -158,10 +153,11 @@
             this.btn_Play.FlatAppearance.BorderSize = 0;
             this.btn_Play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Play.Font = new System.Drawing.Font("Comic Sans MS", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Play.Location = new System.Drawing.Point(591, 865);
+            this.btn_Play.Location = new System.Drawing.Point(394, 554);
+            this.btn_Play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Play.Name = "btn_Play";
             this.btn_Play.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_Play.Size = new System.Drawing.Size(134, 112);
+            this.btn_Play.Size = new System.Drawing.Size(89, 72);
             this.btn_Play.TabIndex = 24;
             this.btn_Play.UseVisualStyleBackColor = false;
             this.btn_Play.Click += new System.EventHandler(this.btn_Play_Click);
@@ -172,9 +168,10 @@
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Location = new System.Drawing.Point(0, 1090);
+            this.exit.Location = new System.Drawing.Point(0, 698);
+            this.exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(58, 61);
+            this.exit.Size = new System.Drawing.Size(39, 39);
             this.exit.TabIndex = 25;
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
@@ -185,9 +182,10 @@
             this.btn_Love.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Love.FlatAppearance.BorderSize = 0;
             this.btn_Love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Love.Location = new System.Drawing.Point(852, 717);
+            this.btn_Love.Location = new System.Drawing.Point(568, 459);
+            this.btn_Love.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Love.Name = "btn_Love";
-            this.btn_Love.Size = new System.Drawing.Size(93, 75);
+            this.btn_Love.Size = new System.Drawing.Size(62, 48);
             this.btn_Love.TabIndex = 21;
             this.btn_Love.UseVisualStyleBackColor = true;
             this.btn_Love.Click += new System.EventHandler(this.btn_Love_Click);
@@ -197,17 +195,19 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(945, 659);
+            this.pictureBox1.Size = new System.Drawing.Size(630, 422);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
             // information_for_history
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1864, 1151);
+            this.ClientSize = new System.Drawing.Size(1243, 694);
             this.ControlBox = false;
             this.Controls.Add(this.lbquantity);
             this.Controls.Add(this.label4);
@@ -222,6 +222,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Love);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "information_for_history";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

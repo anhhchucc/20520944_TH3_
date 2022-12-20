@@ -145,7 +145,7 @@ namespace _20520944_TH3
 
             
             text_ = btn_Love.Text;
-            music_play = music;
+            music_play = love_music;
             Home uc = new Home(this);
             addUserControl(uc);
         }
@@ -304,7 +304,7 @@ namespace _20520944_TH3
                 Player.controls.play();
                 //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
                 //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
-                lb_name.Text = music_[listBox1.SelectedIndex].Name + " - " + music_[listBox1.SelectedIndex].Singer;
+                lb_name.Text = music_[listBox1.SelectedIndex].Name;
                 timer1.Start();
 
             }
@@ -319,7 +319,7 @@ namespace _20520944_TH3
                 Player.controls.play();
                 //lb_name_lyrics.Text = music_[listBox1.SelectedIndex].Name + " Lyrics";
                 //lb_lyrics.Text = music_[listBox1.SelectedIndex].Lyrics;
-                lb_name.Text = music_[listBox1.SelectedIndex].Name + " - " + music_[listBox1.SelectedIndex].Singer;
+                lb_name.Text = music_[listBox1.SelectedIndex].Name;
                 timer1.Start();
             }
         }
@@ -347,6 +347,8 @@ namespace _20520944_TH3
                 lb_name.Text = music_[listBox1.SelectedIndex].Name;
                 pictureBox2.Image = Resources.pause;
                 play_music = true;
+                button7.BackgroundImage = Resources.love;
+                love = true;
                 timer1.Start();
                 history_play = new class_history_music(music_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
                 history_music_play.Add(history_play);
@@ -357,10 +359,11 @@ namespace _20520944_TH3
         {
             Player.controls.currentPosition = Player.currentMedia.duration * e.X / progressBar1.Width;
         }
-
+        int count = 0;
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Player.controls.stop();
+            count++;
             pictureBox2.Image = Resources.play;
             play_music = false;
         }
@@ -379,6 +382,12 @@ namespace _20520944_TH3
                 pictureBox2.Image = Resources.pause;
                 play_music = true;
                 Player.controls.play();
+            }
+            if (count > 0)
+            {
+                history_play = new class_history_music(music_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
+                history_music_play.Add(history_play);
+                count = 0;
             }
         }
         internal void load_image()
@@ -399,6 +408,35 @@ namespace _20520944_TH3
         {
             Player.controls.stop();
             Player.controls.play();
+            history_play = new class_history_music(music_[listBox1.SelectedIndex].Name, DateTime.Now.ToString());
+            history_music_play.Add(history_play);
+        }
+        public bool love = true;
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (love)
+            {
+                button7.BackgroundImage = Resources.Heartt;
+                bool flag = true;
+                for (int i = 0; i < love_music.Count; i++)
+                {
+                    if (love_music[i].Name == music_[listBox1.SelectedIndex].Name)
+                    {
+                        flag = false;
+                    }
+                }
+                if (flag)
+                {
+                    love_music.Add(music_[listBox1.SelectedIndex]);
+                    
+                }
+                love = false;
+            }
+            else
+            {
+                button7.BackgroundImage = Resources.love;
+                love = true;
+            }
         }
     }
 }
